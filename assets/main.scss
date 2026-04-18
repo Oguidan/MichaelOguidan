@@ -3,3 +3,11 @@
 ---
 
 @import "micky";
+
+.hero {
+  color: $brand-color;
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-block: $spacing-unit * 2;
+}
