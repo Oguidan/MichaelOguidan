@@ -1,7 +1,36 @@
+{% if page.title %}
+  {% assign title = page.title %}
+{% else %}
+  {% assign title = site.title %}
+{% endif %}
+
+{% if page.collection == 'posts' %}
+  {% assign description = page.excerpt | strip_html | strip_newlines %}
+{% else %}
+  {% if page.description %}
+    {% assign description = page.description %}
+  {% else %}
+    {% assign description = site.description %}
+  {% endif %}
+{% endif %}
+
+<!-- {% page.og_image %}
+  {% assign image = page.og_image | absolute_url %}
+{% else %}
+  {% assign image = '/assets/images/opengraph.png' | absolute_url %}
+{% endif %} -->
+
+{% assign url = page.url | absolute_url %}
+
 <head>
+  <title>{{ title }}</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="handheldfriendly" content="true">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ description}}">
+
+  <meta property="og:url" content="{{ url }}" />
   {%- seo -%}
   <link rel="stylesheet" href="/assets/main.css">
   {%- feed_meta -%}
