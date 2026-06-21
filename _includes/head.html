@@ -4,7 +4,7 @@
   {% assign title = site.title %}
 {% endif %}
 
-{% if page.collection %}
+{% if page.collection == 'posts' %}
   {% assign description = page.excerpt | strip_html | strip_newlines %}
 {% else %}
   {% if page.description %}
@@ -14,7 +14,13 @@
   {% endif %}
 {% endif %}
 
-{% assign url = absolute_url %}
+{% if page.og_image %}
+  {% assign image = page.og_image | absolute_url %}
+{% else %}
+  {% assign image = '/assets/images/michael_oguidan_logo.jpeg' | absolute_url %}
+{% endif %}
+
+{% assign url = page.url  | absolute_url %}
 
 <head>
   <meta charset="utf-8">
