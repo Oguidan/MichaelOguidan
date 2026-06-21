@@ -23,7 +23,7 @@ email: michaeloguidan@gmail.com
 description: Notes from the trenches of backend engineering and open source. I build with Go, Python, and cloud-native tools, contribute to projects used by developers worldwide, and write about making systems faster, safer, and more reliable.
 baseurl: "/MichaelOguidan" # the subpath of your site, e.g. /blog
 url: "https://oguidan.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
+twitter_username: "@Oguidan1"
 github_username:  jekyll
 
 # Build settings
