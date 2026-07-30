@@ -31,15 +31,21 @@
 
 <header>
   <div class="app {{ site.themeClass }}" data-screen-label="Blog Michael Oguidan">
+
+    {%- assign default_paths = site.pages | map: "path" -%}
+    {%- assign page_paths = site.header_pages | default: default_paths -%}
+
     <nav class="nav">
       <div class="container navwrap">
-        <div class="brand" onClick="{{ goHome }}">
-          <div class="logo">MO</div>
-          <div>
-            <div class="brandname">Michael Oguidan</div>
-            <div class="brandsub mono">software engineer</div>
+        <a class="site-title" rel="author" href="{{ " /" | relative_url }}">{{ site.title | escape }}
+          <div class="brand">
+            <div class="logo">MO</div>
+            <div>
+              <div class="brandname">Michael Oguidan</div>
+              <div class="brandsub mono">software engineer</div>
+            </div>
           </div>
-        </div>
+        </a>
         <div class="navlinks">
           <a class="navlink {{ homeActive }}" onClick="{{ goHome }}">Accueil</a>
           <a class="navlink {{ articlesActive }}" onClick="{{ goArticles }}">Articles</a>
