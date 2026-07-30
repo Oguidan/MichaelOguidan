@@ -10,6 +10,13 @@
   border-bottom: 1px solid var(--border);
 }
 
+.navwrap {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .site-header {
   border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
