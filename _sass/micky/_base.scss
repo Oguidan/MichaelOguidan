@@ -35,6 +35,22 @@
   --codetx: #cdd6e6;
 }
 
+.dark {
+  --bg: #0a0d14;
+  --surface: #11151f;
+  --surface2: #181d29;
+  --text: #e7eaf0;
+  --muted: #9aa3b2;
+  --faint: #697086;
+  --border: #1d2330;
+  --accent: #3b82f6;
+  --accent-h: #60a5fa;
+  --accent-bg: rgba(59, 130, 246, .12);
+  --shadow: 0 1px 2px rgba(0, 0, 0, .5), 0 18px 40px -18px rgba(0, 0, 0, .7);
+  --code: #0c111c;
+  --codetx: #cdd6e6;
+}
+
 .mono {
   font-family: 'IBM Plex Mono', monospace;
 }
