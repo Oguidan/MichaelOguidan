@@ -223,7 +223,34 @@
   @include relative-font-size(1.5);
 }
 
+@media(max-width:680px) {
 
+  .container,
+  .narrow {
+    padding: 0 20px
+  }
+
+  .navlinks {
+    display: none
+  }
+
+  .grid3 {
+    grid-template-columns: 1fr
+  }
+
+  .pagetitle,
+  h1.arttitle {
+    font-size: 30px
+  }
+
+  .feattitle {
+    font-size: 22px
+  }
+
+  .skillgrid {
+    grid-template-columns: 1fr
+  }
+}
 
 /**
  * Posts
