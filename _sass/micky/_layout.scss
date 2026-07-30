@@ -39,6 +39,12 @@
   box-shadow: 0 4px 12px -3px color-mix(in srgb, var(--accent) 60%, transparent);
 }
 
+.brandname {
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: -.01em;
+}
+
 .site-header {
   border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
