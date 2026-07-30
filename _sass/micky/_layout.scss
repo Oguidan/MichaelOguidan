@@ -24,6 +24,21 @@
   cursor: pointer
 }
 
+.logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: var(--accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: .5px;
+  box-shadow: 0 4px 12px -3px color-mix(in srgb, var(--accent) 60%, transparent);
+}
+
 .site-header {
   border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
