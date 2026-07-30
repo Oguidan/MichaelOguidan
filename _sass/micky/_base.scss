@@ -36,6 +36,7 @@
 }
 
 .dark {
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
   --bg: #0a0d14;
   --surface: #11151f;
   --surface2: #181d29;
@@ -49,6 +50,9 @@
   --shadow: 0 1px 2px rgba(0, 0, 0, .5), 0 18px 40px -18px rgba(0, 0, 0, .7);
   --code: #0c111c;
   --codetx: #cdd6e6;
+  color: var(--text);
+  background: var(--bg);
+  transition: background .35s ease, color .35s ease;
 }
 
 .mono {
