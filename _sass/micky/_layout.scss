@@ -66,6 +66,18 @@
   text-decoration: none;
 }
 
+.navlink:hover {
+  color: var(--text);
+  background: var(--surface);
+  text-decoration: none;
+}
+
+.navlink.active {
+  color: var(--accent);
+  background: var(--accent-bg);
+  text-decoration: none;
+}
+
 .site-header {
   border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
