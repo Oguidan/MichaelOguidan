@@ -94,13 +94,14 @@
   color: var(--muted);
   border: 1px solid var(--border);
   transition: .18s;
-  background-color: none;
+  background: transparent;
 }
 
 .iconbtn:hover {
   color: var(--text);
   border-color: var(--faint);
   transform: translateY(-1px);
+  background: transparent;
 }
 
 .site-header {
