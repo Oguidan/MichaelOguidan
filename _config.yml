@@ -19,6 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Michael Oguidan
+themeClaass: dark
 email: michaeloguidan@gmail.com
 description: Notes from the trenches of backend engineering and open source. I build with Go, Python, and cloud-native tools, contribute to projects used by developers worldwide, and write about making systems faster, safer, and more reliable.
 baseurl: "/MichaelOguidan" # the subpath of your site, e.g. /blog

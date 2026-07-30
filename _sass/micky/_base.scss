@@ -1,9 +1,59 @@
+.app {
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  min-height: 100vh;
+  --bg: #ffffff;
+  --surface: #f7f8fa;
+  --surface2: #eef1f6;
+  --text: #0f172a;
+  --muted: #5b6675;
+  --faint: #8a94a3;
+  --border: #e4e8ee;
+  --accent: #2563eb;
+  --accent-h: #1d4ed8;
+  --accent-bg: #eff5ff;
+  --shadow: 0 1px 2px rgba(15, 23, 42, .05), 0 12px 30px -16px rgba(15, 23, 42, .18);
+  --code: #0b1220;
+  --codetx: #cbd5e1;
+  color: var(--text);
+  background: var(--bg);
+  transition: background .35s ease, color .35s ease
+}
+
+.app.dark {
+  --bg: #0a0d14;
+  --surface: #11151f;
+  --surface2: #181d29;
+  --text: #e7eaf0;
+  --muted: #9aa3b2;
+  --faint: #697086;
+  --border: #1d2330;
+  --accent: #3b82f6;
+  --accent-h: #60a5fa;
+  --accent-bg: rgba(59, 130, 246, .12);
+  --shadow: 0 1px 2px rgba(0, 0, 0, .5), 0 18px 40px -18px rgba(0, 0, 0, .7);
+  --code: #0c111c;
+  --codetx: #cdd6e6
+}
+
 /**
  * Reset some basic elements
  */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
   margin: 0;
   padding: 0;
 }
@@ -19,9 +69,9 @@ body {
   background-color: $background-color;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
-     -moz-font-feature-settings: "kern" 1;
-       -o-font-feature-settings: "kern" 1;
-          font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
   font-kerning: normal;
   display: flex;
   min-height: 100vh;
@@ -37,9 +87,19 @@ body {
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure,
 %vertical-rhythm {
   margin-bottom: $spacing-unit * 0.5;
 }
@@ -50,7 +110,8 @@ ul, ol, dl, figure,
  * `main` element
  */
 main {
-  display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
+  display: block;
+  /* Default value of `display` of `main` element is 'inline' in IE 11. */
 }
 
 
@@ -68,7 +129,7 @@ img {
 /**
  * Figures
  */
-figure > img {
+figure>img {
   display: block;
 }
 
@@ -81,13 +142,15 @@ figcaption {
 /**
  * Lists
  */
-ul, ol {
+ul,
+ol {
   margin-left: $spacing-unit;
 }
 
 li {
-  > ul,
-  > ol {
+
+  >ul,
+  >ol {
     margin-bottom: 0;
   }
 }
@@ -97,7 +160,12 @@ li {
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: $base-font-weight;
 }
 
@@ -166,7 +234,7 @@ pre {
   padding: 8px 12px;
   overflow-x: auto;
 
-  > code {
+  >code {
     border: 0;
     padding-right: 0;
     padding-left: 0;
@@ -180,7 +248,7 @@ pre {
  */
 .wrapper {
   max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
   margin-right: auto;
   margin-left: auto;
   padding-right: $spacing-unit;
@@ -189,7 +257,7 @@ pre {
 
   @include media-query($on-laptop) {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+    max-width: calc(#{$content-width} - (#{$spacing-unit}));
     padding-right: $spacing-unit * 0.5;
     padding-left: $spacing-unit * 0.5;
   }
@@ -213,16 +281,16 @@ pre {
  */
 
 .svg-icon {
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-    fill: #{$grey-color};
-    padding-right: 5px;
-    vertical-align: text-top;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  fill: #{$grey-color};
+  padding-right: 5px;
+  vertical-align: text-top;
 }
 
 .social-media-list {
-  li + li {
+  li+li {
     padding-top: 5px;
   }
 }
@@ -239,19 +307,24 @@ table {
   color: lighten($text-color, 18%);
   border-collapse: collapse;
   border: 1px solid $grey-color-light;
+
   tr {
     &:nth-child(even) {
       background-color: lighten($grey-color-light, 6%);
     }
   }
-  th, td {
+
+  th,
+  td {
     padding: ($spacing-unit * 0.3333333333) ($spacing-unit * 0.5);
   }
+
   th {
     background-color: lighten($grey-color-light, 3%);
     border: 1px solid darken($grey-color-light, 4%);
     border-bottom-color: darken($grey-color-light, 12%);
   }
+
   td {
     border: 1px solid $grey-color-light;
   }
