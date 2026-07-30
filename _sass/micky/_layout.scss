@@ -84,6 +84,24 @@
   gap: 8px
 }
 
+.iconbtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  transition: .18s;
+}
+
+.iconbtn:hover {
+  color: var(--text);
+  border-color: var(--faint);
+  transform: translateY(-1px);
+}
+
 .site-header {
   border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
