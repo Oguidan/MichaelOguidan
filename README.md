@@ -71,48 +71,18 @@ The project is built using modern web technologies.
 ├── 404.html
 ├── Gemfile
 ├── Gemfile.lock
-└── README.md
-```
-
----
-
-## 🚀 Getting Started
-
-Clone the repository
-
-```bash
-git clone https://github.com/<your-username>/<repository-name>.git
-```
-
-Navigate into the project
-
-```bash
-cd <repository-name>
-```
-
-Install dependencies
-
-```bash
-npm install
-```
-
-Start the development server
-
-```bash
-npm run dev
-```
-
-Build for production
-
-```bash
-npm run build
+├── LICENSE
+├── README.md
+├── _config.yml
+├── about.markdown
+└── index.html
 ```
 
 ---
 
 ## ✍️ Writing Articles
 
-Articles are written in Markdown/MDX and stored inside the `articles` directory.
+Articles are written in Markdown/MDX and stored inside the `_posts` directory.
 
 Each article includes:
 
@@ -126,19 +96,6 @@ Each article includes:
 
 ---
 
-## 💼 Portfolio
-
-Each project contains:
-
-- Project overview
-- Problem statement
-- Solution
-- Technologies used
-- Screenshots
-- Challenges
-- Lessons learned
-- Links to source code or live demo
-
 ---
 
 ## 🎯 Goals
@@ -148,7 +105,6 @@ This website aims to:
 - Share knowledge with the developer community.
 - Build a strong personal brand.
 - Document my engineering journey.
-- Showcase impactful projects.
 - Inspire others through technical writing.
 
 ---
@@ -184,9 +140,8 @@ If you'd like to improve the project:
 
 Feel free to reach out if you'd like to collaborate or discuss software engineering.
 
-- GitHub
+- Discord
 - LinkedIn
-- Email
 
 ---
 
