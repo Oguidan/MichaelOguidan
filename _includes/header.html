@@ -47,10 +47,10 @@
           </div>
         </a>
         <div class="navlinks">
-          <a class="navlink {{ homeActive }}" onClick="{{ goHome }}">Accueil</a>
-          <a class="navlink {{ articlesActive }}" onClick="{{ goArticles }}">Articles</a>
-          <a class="navlink {{ aboutActive }}" onClick="{{ goAbout }}">À propos</a>
-          <a class="navlink {{ styleActive }}" onClick="{{ goStyle }}">Style</a>
+          <a class="navlink" rel="author" href="{{ "/" | relative_url }}">Accueil</a>
+          <a class="navlink" rel="author" href="{{ "/" | relative_url }}">Articles</a>
+          <a class="navlink" rel="author" href="{{ "/" | relative_url }}">À propos</a>
+          <a class="navlink" rel="author" href="{{ "/" | relative_url }}">Style</a>
         </div>
         <div class="navact">
           <button class="iconbtn" onClick="{{ toggleTheme }}" title="{{ themeTitle }}">{{ themeIcon }}</button>
