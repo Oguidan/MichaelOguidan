@@ -121,12 +121,14 @@
   background: var(--accent);
   color: #fff;
   box-shadow: 0 6px 18px -8px color-mix(in srgb, var(--accent) 80%, transparent);
+  background: transparent;
 }
 
 .btn-primary:hover {
   background: var(--accent-h);
   transform: translateY(-1px);
   box-shadow: 0 10px 24px -8px color-mix(in srgb, var(--accent) 80%, transparent);
+  background: transparent;
 }
 
 .btn-sm {
