@@ -37,7 +37,7 @@
 
     <nav class="nav">
       <div class="container navwrap">
-        <a class="navlink {{ homeActive }}" rel="author" href="{{ "/" | relative_url }}">
+        <a class="navlink {{ site.homeActive }}" rel="author" href="{{ "/" | relative_url }}">
           <div class="brand">
             <div class="logo">MO</div>
             <div>
@@ -47,7 +47,7 @@
           </div>
         </a>
         <div class="navlinks">
-          <a class="navlink {{ homeActive }}" rel="author" href="{{ "/" | relative_url }}">Accueil</a>
+          <a class="navlink {{ site.homeActive }}" rel="author" href="{{ "/" | relative_url }}">Accueil</a>
           <a class="navlink" rel="author" href="{{ "/" | relative_url }}">Articles</a>
           <a class="navlink" rel="author" href="{{ "/" | relative_url }}">À propos</a>
         </div>
