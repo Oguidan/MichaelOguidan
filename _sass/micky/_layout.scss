@@ -7,6 +7,17 @@ HERO
   overflow: hidden;
 }
 
+.herobg {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, color-mix(in srgb, var(--text) 9%, transparent) 1px, transparent 0);
+  background-size: 26px 26px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 30% 30%, #000 30%, transparent 75%);
+  mask-image: radial-gradient(ellipse 70% 60% at 30% 30%, #000 30%, transparent 75%);
+  opacity: .6;
+  pointer-events: none;
+}
+
 /**
  * Site header
  */
