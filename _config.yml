@@ -21,6 +21,7 @@
 title: Michael Oguidan
 themeClass: dark
 themeIcon: 🌙
+homeActive: active
 themeTitle: "Switch to light mode"
 email: michaeloguidan@gmail.com
 description: Notes from the trenches of backend engineering and open source. I build with Go, Python, and cloud-native tools, contribute to projects used by developers worldwide, and write about making systems faster, safer, and more reliable.
