@@ -3,4 +3,70 @@ id: home
 permalink: /
 layout: page
 ---
-<h1 class="hero">Hello, Micky the Devv</h1>
+<section class="hero" data-screen-label="Accueil">
+    <div class="herobg"></div>
+    <div class="container herogrid">
+        <div>
+            <span class="eyebrow"><span class="statusdot"></span>Disponible pour de nouveaux projets</span>
+            <h1 class="disp">De l'idée au <span class="em">déploiement</span>,<br>du code au <span
+                    class="em">cloud</span>.</h1>
+            <p class="lead">Software Engineer spécialisé en systèmes performants et fiables — backend Go &amp; Python,
+                infrastructure cloud, pipelines de données. Ici, je partage mes réflexions, retours d'expérience et
+                analyses sur l'ingénierie et l'innovation.</p>
+            <div class="herocta"><a class="btn btn-primary" onClick="{{ goArticles }}">Lire les articles <svg width="15"
+                        height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg></a><a class="btn btn-ghost" onClick="{{ goAbout }}">À propos de moi</a></div>
+            <div class="heromisc">
+                <div class="socials"><a class="iconbtn" href="https://www.linkedin.com/in/michael-oguidan-b642361a6/"
+                        target="_blank" title="LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
+                        </svg></a><a class="iconbtn" href="https://github.com/Oguidan" target="_blank"
+                        title="GitHub"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z" />
+                        </svg></a></div>
+                <div class="divv"></div>
+                <div>
+                    <div class="stacklbl mono">stack principal</div>
+                    <div class="chips"><span class="chip">Python</span><span class="chip">Go</span><span
+                            class="chip">C/C++</span><span class="chip">DevOps</span><span
+                            class="chip">Cloud</span><span class="chip">Data Science</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="herovis">
+            <div class="term">
+                <div class="termbar"><span class="tl tlr"></span><span class="tl tly"></span><span
+                        class="tl tlg"></span><span class="termtitle">~/oguidan — deploy</span></div>
+                <div class="termbody">
+                    <div><span class="tprompt">$</span> <span class="tcmd">go build ./... &amp;&amp; ./deploy --env
+                            prod</span></div>
+                    <div><span class="tok">✓</span> build passed<span class="tmut"> 1.2s</span></div>
+                    <div><span class="tok">✓</span> tests <span class="tnum">184/184</span> passed<span class="tmut">
+                            3.4s</span></div>
+                    <div><span class="tarr">→</span> rolling update<span class="tmut"> </span><span
+                            class="tcmd">prod-eu-west</span></div>
+                    <div><span class="tok">✓</span> deployment healthy<span class="tmut"> 8.7s</span></div>
+                    <div><span class="tmut"># zéro downtime · 3 régions</span></div>
+                </div>
+            </div>
+            <div class="ministats">
+                <div class="mstat">
+                    <div class="v">99.98<span style="font-size:13px;color:var(--faint)">%</span></div>
+                    <div class="k mono">uptime</div>
+                </div>
+                <div class="mstat">
+                    <div class="v">6<span style="font-size:13px;color:var(--faint)"> langages</span></div>
+                    <div class="k mono">maîtrisés</div>
+                </div>
+                <div class="mstat">
+                    <div class="v">∞</div>
+                    <div class="k mono">curiosité</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
