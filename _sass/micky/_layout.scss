@@ -336,6 +336,14 @@ HERO
   padding: 0 32px;
 }
 
+.herogrid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 54px;
+  align-items: center;
+}
+
 .page-content {
   padding: $spacing-unit 0;
   flex: 1;
@@ -439,5 +447,46 @@ HERO
     @include media-query($on-laptop) {
       @include relative-font-size(1.125);
     }
+  }
+}
+
+/*
+Media
+*/
+@media(max-width:900px) {
+  .herogrid {
+    grid-template-columns: 1fr;
+    gap: 38px
+  }
+
+  .herovis {
+    display: none
+  }
+
+  .featured {
+    grid-template-columns: 1fr
+  }
+
+  .featcover {
+    min-height: 180px
+  }
+
+  .grid3 {
+    grid-template-columns: repeat(2, 1fr)
+  }
+
+  .abouthero,
+  .contactgrid {
+    grid-template-columns: 1fr;
+    gap: 30px
+  }
+
+  .profilecard {
+    position: static;
+    max-width: 340px
+  }
+
+  h1.disp {
+    font-size: 40px
   }
 }
