@@ -49,6 +49,21 @@ HERO
   margin-top: 9px;
 }
 
+.chip {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 5px 11px;
+  border-radius: 7px;
+}
+
+.chip:hover {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+}
+
 /**
  * Site header
  */
