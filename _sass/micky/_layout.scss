@@ -1,4 +1,24 @@
 /*
+TERMINAL
+*/
+.term {
+  background: var(--code);
+  border: 1px solid color-mix(in srgb, #fff 9%, transparent);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.termbar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 13px 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, .07);
+}
+
+/*
 HERO
 */
 .hero {
@@ -62,15 +82,6 @@ HERO
 .chip:hover {
   color: var(--accent);
   border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
-}
-
-.term {
-  background: var(--code);
-  border: 1px solid color-mix(in srgb, #fff 9%, transparent);
-  border-radius: 14px;
-  box-shadow: var(--shadow);
-  overflow: hidden;
-  font-family: 'IBM Plex Mono', monospace;
 }
 
 /**
