@@ -25,6 +25,11 @@ HERO
   margin-top: 30px;
 }
 
+.socials {
+  display: flex;
+  gap: 8px;
+}
+
 /**
  * Site header
  */
@@ -170,8 +175,6 @@ HERO
 
 .btn-ghost:hover {
   border-color: var(--faint);
-  background: var(--surface);
-  color: var(--text);
   transform: translateY(-1px);
   text-decoration: none;
 }
