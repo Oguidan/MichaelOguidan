@@ -155,6 +155,17 @@ HERO
   font-size: 13px;
 }
 
+.btn-ghost {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-ghost:hover {
+  border-color: var(--faint);
+  transform: translateY(-1px);
+}
+
 .site-header {
   border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
