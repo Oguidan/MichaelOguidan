@@ -379,6 +379,14 @@ h1.disp {
   color: var(--accent);
 }
 
+.lead {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 22px 0 0;
+  max-width: 520px;
+}
+
 .page-heading {
   @include relative-font-size(2);
 }
