@@ -366,6 +366,19 @@ HERO
   box-shadow: 0 0 0 3px color-mix(in srgb, #22c55e 22%, transparent)
 }
 
+h1.disp {
+  font-size: 52px;
+  line-height: 1.05;
+  font-weight: 600;
+  letter-spacing: -.025em;
+  margin: 20px 0 0;
+  text-wrap: balance;
+}
+
+.disp .em {
+  color: var(--accent);
+}
+
 .page-content {
   padding: $spacing-unit 0;
   flex: 1;
