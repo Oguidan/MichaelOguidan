@@ -159,11 +159,14 @@ HERO
   background: var(--surface);
   color: var(--text);
   border: 1px solid var(--border);
+  text-decoration: none;
 }
 
 .btn-ghost:hover {
   border-color: var(--faint);
+  color: var(--text);
   transform: translateY(-1px);
+  text-decoration: none;
 }
 
 .site-header {
