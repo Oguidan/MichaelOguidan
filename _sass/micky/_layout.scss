@@ -64,6 +64,15 @@ HERO
   border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
 }
 
+.term {
+  background: var(--code);
+  border: 1px solid color-mix(in srgb, #fff 9%, transparent);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
 /**
  * Site header
  */
