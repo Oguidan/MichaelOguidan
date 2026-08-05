@@ -387,6 +387,13 @@ h1.disp {
   max-width: 520px;
 }
 
+.herocta {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
 .page-heading {
   @include relative-font-size(2);
 }
