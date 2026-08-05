@@ -42,6 +42,13 @@ HERO
   letter-spacing: .03em;
 }
 
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 9px;
+}
+
 /**
  * Site header
  */
