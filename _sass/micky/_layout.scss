@@ -80,6 +80,26 @@ TERMINAL
   margin-top: 14px;
 }
 
+.mstat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  padding: 13px 14px;
+}
+
+.mstat .v {
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: -.02em;
+}
+
+.mstat .k {
+  font-size: 11px;
+  color: var(--faint);
+  margin-top: 2px;
+  letter-spacing: .02em;
+}
+
 /*
 HERO
 */
