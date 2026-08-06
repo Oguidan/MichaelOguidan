@@ -34,6 +34,19 @@ h2.sec {
   max-width: 460px;
 }
 
+.link-more {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.link-more:hover {
+  gap: 9px;
+}
+
 /*
 TERMINAL
 */
