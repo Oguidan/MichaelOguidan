@@ -622,6 +622,19 @@ HERO
   margin-bottom: 14px;
 }
 
+.footlink {
+  display: block;
+  font-size: 14px;
+  color: var(--muted);
+  padding: 5px 0;
+  cursor: pointer;
+  transition: .16s;
+}
+
+.footlink:hover {
+  color: var(--accent);
+}
+
 .site-footer {
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
