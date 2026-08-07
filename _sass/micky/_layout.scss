@@ -56,6 +56,16 @@
   opacity: .4;
 }
 
+.covwm {
+  position: absolute;
+  right: 15px;
+  top: 13px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: .06em;
+  color: rgba(255, 255, 255, .34);
+}
+
 /* SECTIONS */
 .section {
   padding: 60px 0
