@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Architecturer un pipeline de données temps réel avec Go et Kafka"
 date:   2026-04-15 00:27:07 +0000
-categories: jekyll update
+categories: STREAM
 cover: cover-data
 topic: Data Science
 ---
