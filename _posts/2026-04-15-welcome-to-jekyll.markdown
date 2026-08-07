@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Architecturer un pipeline de données temps réel avec Go et Kafka"
-date:   2026-04-15 00:27:07 +0000
+date:   2026-04-15
 categories: STREAM
 cover: cover-data
 topic: Data Science
