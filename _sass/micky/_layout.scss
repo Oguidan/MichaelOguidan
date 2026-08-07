@@ -5,6 +5,23 @@
   gap: 22px;
 }
 
+.acard {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .24s;
+  display: flex;
+  flex-direction: column
+}
+
+.acard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: color-mix(in srgb, var(--accent) 30%, var(--border))
+}
+
 /* SECTIONS */
 .section {
   padding: 60px 0
