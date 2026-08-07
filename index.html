@@ -94,8 +94,6 @@ layout: page
         <div class="grid3">
             {% for post in paginator.posts %}
                 {% include post.html %}
-            {% endfor %}
-            <sc-for list="{{ homeArticles }}" as="a" hint-placeholder-count="3">
                 <div class="acard" onClick="{{ a.open }}">
                     <div class="cover {{ a.cov }}">
                         <div class="grido"></div>
@@ -110,7 +108,7 @@ layout: page
                         </div>
                     </div>
                 </div>
-            </sc-for>
+            {% endfor %}
         </div>
     </div>
 </section>
