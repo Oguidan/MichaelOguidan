@@ -612,6 +612,16 @@ HERO
   max-width: 300px;
 }
 
+.footh {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--faint);
+  font-family: 'IBM Plex Mono', monospace;
+  margin-bottom: 14px;
+}
+
 .site-footer {
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
