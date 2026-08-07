@@ -13,19 +13,39 @@
   cursor: pointer;
   transition: .24s;
   display: flex;
-  flex-direction: column
+  flex-direction: column;
 }
 
 .acard:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow);
-  border-color: color-mix(in srgb, var(--accent) 30%, var(--border))
+  border-color: color-mix(in srgb, var(--accent) 30%, var(--border));
 }
 
 .cover {
   position: relative;
   height: 158px;
-  overflow: hidden
+  overflow: hidden;
+}
+
+.cover-data {
+  background: linear-gradient(135deg, #0f766e, #2563eb);
+}
+
+.cover-devops {
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+}
+
+.cover-cloud {
+  background: linear-gradient(135deg, #075985, #0ea5e9);
+}
+
+.cover-backend {
+  background: linear-gradient(135deg, #334155, #1d4ed8);
+}
+
+.cover-lead {
+  background: linear-gradient(135deg, #5b21b6, #2563eb);
 }
 
 /* SECTIONS */
