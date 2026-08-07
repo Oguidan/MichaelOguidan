@@ -599,6 +599,13 @@ HERO
   margin-top: 40px;
 }
 
+.footgrid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 32px;
+  padding: 50px 0 30px;
+}
+
 .site-footer {
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
