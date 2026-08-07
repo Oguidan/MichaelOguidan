@@ -48,6 +48,14 @@
   background: linear-gradient(135deg, #5b21b6, #2563eb);
 }
 
+.grido {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, .22) 1px, transparent 1px);
+  background-size: 15px 15px;
+  opacity: .4;
+}
+
 /* SECTIONS */
 .section {
   padding: 60px 0
