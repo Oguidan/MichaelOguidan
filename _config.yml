@@ -59,6 +59,11 @@ exclude:
   - README.md
   - bin
 
+collections:
+  pages:
+    output: true
+    permalink: "/:name"
+
 sass:
   style: compressed
   sass_dir: _sass
