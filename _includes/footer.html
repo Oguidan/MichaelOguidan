@@ -35,7 +35,7 @@
 </footer> -->
 
 <footer class="footer app {{ site.themeClass }}">
-  <div class="container">
+  <div class="container app {{ site.themeClass }}">
     <div class="footgrid">
       <div>
         <div class="brand" style="cursor:default">
@@ -48,9 +48,8 @@
         <p class="footblurb">From code to the cloud — thoughts and experiences on software engineering, data, and innovation.</p>
       </div>
       <div>
-        <div class="footh">Navigation</div><a class="footlink" onClick="{{ goHome }}">Accueil</a><a class="footlink"
-          onClick="{{ goArticles }}">Articles</a><a class="footlink" onClick="{{ goAbout }}">À
-          propos</a><a class="footlink" onClick="{{ goContact }}">Contact</a>
+        <div class="footh">Navigation</div><a class="footlink" onClick="{{ goHome }}">Home</a><a class="footlink"
+          onClick="{{ goArticles }}">Articles</a><a class="footlink" onClick="{{ goAbout }}">About</a><a class="footlink" onClick="{{ goContact }}">Contact</a>
       </div>
       <div>
         <div class="footh">Sujets</div><a class="footlink" onClick="{{ goArticles }}">DevOps</a><a class="footlink"
