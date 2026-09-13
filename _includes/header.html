@@ -32,12 +32,14 @@
 <header role="banner">
   <div class="app {{ site.themeClass }}" data-screen-label="Blog Michael Oguidan">
 
-    {%- assign default_paths = site.pages | map: "path" -%}
-    {%- assign page_paths = site.header_pages | default: default_paths -%}
+    {%- assign current_page = page.url | default: "/" -%}
+    {%- assign homeActive = "" -%}
+    {%- assign articlesActive = "" -%}
 
-    {% if page_paths = "articles"%}
+    {% if current_page == "/articles" %}
       {% assign articlesActive = "active" %}
-      {% assign homeActive = "" %}
+    {% elsif current_page == "/" %}
+      {% assign homeActive = "active" %}
     {% endif %}
 
     <nav class="nav">
@@ -52,8 +54,8 @@
           </div>
         </a>
         <div class="navlinks">
-          <a class="navlink {{ site.homeActive }}" rel="author" href="{{ "/" | relative_url }}">Home</a>
-          <a class="navlink {{ site.articlesActive }}" rel="author" href="{{ "/articles" | relative_url }}">Articles</a>
+          <a class="navlink {{ homeActive }}" rel="author" href="{{ "/" | relative_url }}">Home</a>
+          <a class="navlink {{ articlesActive }}" rel="author" href="{{ "/articles" | relative_url }}">Articles</a>
           <a class="navlink" rel="author" href="{{ "/" | relative_url }}">About</a>
         </div>
         <div class="navact">
