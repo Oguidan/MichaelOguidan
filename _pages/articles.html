@@ -16,58 +16,80 @@ layout: default
     <section class="section" style="padding-top:36px">
         <div class="container">
             <div class="filterbar">
-      {% for category in site.categories %}
-        <button class="fchip">{{ category[0] }}</button>
-      {% endfor %}
-    </div>
-
-    {% assign featured = site.posts | where: "featured", true | first %}
-
-    {% if featured %}
-      <div class="featured">
-        <div class="featcover {{ featured.categories | first | downcase }}">
-          <div class="grido"></div>
-          <div class="covwm">{{ featured.title | truncate: 18 }}</div>
-        </div>
-
-        <div class="featbody">
-          <span class="featpill">★ À la une · {{ featured.categories | first }}</span>
-          <div class="feattitle">{{ featured.title }}</div>
-          <p class="featexc">{{ featured.excerpt | strip_html }}</p>
-
-          <div class="acmeta" style="margin-top:20px">
-            <span>{{ featured.date | date: "%d %b %Y" }}</span>
-            <span class="dotsep"></span>
-            <span>{{ featured.content | reading_time }} min</span>
-          </div>
-        </div>
-      </div>
-    {% endif %}
-
-    <div class="grid3">
-      {% for post in site.posts %}
-        <div class="acard">
-          <div class="cover {{ post.categories | first | downcase }}">
-            <div class="grido"></div>
-            <div class="covwm">{{ post.title | truncate: 18 }}</div>
-            <div class="covtag">{{ post.categories | first }}</div>
-          </div>
-
-          <div class="acbody">
-            <div class="actitle">
-              <a href="{{ post.url }}">{{ post.title }}</a>
+                <button class="fchip is-active" data-filter="all">All</button>
+                {% for category in site.categories %}
+                <button class="fchip" data-filter="{{ category[0] | slugify }}">{{ category[0] }}</button>
+                {% endfor %}
             </div>
-            <div class="acexc">{{ post.excerpt | strip_html }}</div>
 
-            <div class="acmeta">
-              <span>{{ post.date | date: "%d %b %Y" }}</span>
-              <span class="dotsep"></span>
-              <span>{{ post.content | reading_time }} min</span>
+            {% assign featured = site.posts | where: "featured", true | first %}
+
+            {% if featured %}
+            <div class="featured">
+                <div class="featcover {{ featured.categories | first | downcase }}">
+                    <div class="grido"></div>
+                    <div class="covwm">{{ featured.title | truncate: 18 }}</div>
+                </div>
+
+                <div class="featbody">
+                    <span class="featpill">★ À la une · {{ featured.categories | first }}</span>
+                    <div class="feattitle">{{ featured.title }}</div>
+                    <p class="featexc">{{ featured.excerpt | strip_html }}</p>
+
+                    <div class="acmeta" style="margin-top:20px">
+                        <span>{{ featured.date | date: "%d %b %Y" }}</span>
+                        <span class="dotsep"></span>
+                        <span>{{ featured.content | reading_time }} min</span>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      {% endfor %}
-    </div>
+            {% endif %}
+
+            <div class="grid3">
+                {% for post in site.posts %}
+                <div class="acard">
+                    <div class="cover {{ post.categories | first | downcase }}">
+                        <div class="grido"></div>
+                        <div class="covwm">{{ post.title | truncate: 18 }}</div>
+                        <div class="covtag">{{ post.categories | first }}</div>
+                    </div>
+
+                    <div class="acbody">
+                        <div class="actitle">
+                            <a href="{{ post.url }}">{{ post.title }}</a>
+                        </div>
+                        <div class="acexc">{{ post.excerpt | strip_html }}</div>
+
+                        <div class="acmeta">
+                            <span>{{ post.date | date: "%d %b %Y" }}</span>
+                            <span class="dotsep"></span>
+                            <span>{{ post.content | reading_time }} min</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
         </div>
     </section>
 </div>
+
+<script>
+    const chips = document.querySelectorAll('.fchip');
+    const cards = document.querySelectorAll('.acard');
+
+    chips.forEach((chip) => {
+        chip.addEventListener('click', () => {
+            const filter = chip.dataset.filter;
+
+            chips.forEach((c) => c.classList.remove('is-active'));
+            chip.classList.add('is-active');
+
+            cards.forEach((card) => {
+                const categories = card.dataset.category.split(' ');
+                const visible = filter === 'all' || categories.includes(filter);
+
+                card.style.display = visible ? 'block' : 'none';
+            });
+        });
+    });
+</script>
