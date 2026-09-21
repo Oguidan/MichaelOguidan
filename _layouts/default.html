@@ -3,11 +3,11 @@
 
   {%- include head.html -%}
 
-  <body>
+  <body class="app {{ site.themeClass }}">
 
     {%- include header.html -%}
 
-    <main class="app {{ site.themeClass }}" aria-label="Content">
+    <main aria-label="Content">
       <div class="wrapper">
         {{ content }}
       </div>
