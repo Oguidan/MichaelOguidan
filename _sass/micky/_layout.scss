@@ -6,6 +6,28 @@
   margin-bottom: 30px
 }
 
+.fchip {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 8px 16px;
+  border-radius: 100px;
+  transition: .18s
+}
+
+.fchip:hover {
+  color: var(--text);
+  border-color: var(--faint)
+}
+
+.fchip.on {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent)
+}
+
 /* PAGE HEAD */
 .pagehead {
   padding: 60px 0 8px
