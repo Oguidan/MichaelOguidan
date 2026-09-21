@@ -15,38 +15,59 @@ layout: default
     </div>
     <section class="section" style="padding-top:36px">
         <div class="container">
-            <div class="filterbar"><sc-for list="{{ cats }}" as="c" hint-placeholder-count="6"><button
-                        class="fchip {{ c.cls }}" onClick="{{ c.pick }}">{{ c.name }}</button></sc-for></div>
-            <sc-if value="{{ showFeatured }}" hint-placeholder-val="{{ true }}">
-                <div class="featured" onClick="{{ featured.open }}">
-                    <div class="featcover {{ featured.cov }}">
-                        <div class="grido"></div>
-                        <div class="covwm">{{ featured.wm }}</div>
-                    </div>
-                    <div class="featbody"><span class="featpill">★ À la une · {{ featured.cat }}</span>
-                        <div class="feattitle">{{ featured.title }}</div>
-                        <p class="featexc">{{ featured.exc }}</p>
-                        <div class="acmeta" style="margin-top:20px"><span>{{ featured.date }}</span><span
-                                class="dotsep"></span><span>{{ featured.read }}</span></div>
-                    </div>
-                </div>
-            </sc-if>
-            <div class="grid3"><sc-for list="{{ restArticles }}" as="a" hint-placeholder-count="5">
-                    <div class="acard" onClick="{{ a.open }}">
-                        <div class="cover {{ a.cov }}">
-                            <div class="grido"></div>
-                            <div class="covwm">{{ a.wm }}</div>
-                            <div class="covtag">{{ a.cat }}</div>
-                        </div>
-                        <div class="acbody">
-                            <div class="actitle">{{ a.title }}</div>
-                            <div class="acexc">{{ a.exc }}</div>
-                            <div class="acmeta"><span>{{ a.date }}</span><span class="dotsep"></span><span>{{ a.read
-                                    }}</span>
-                            </div>
-                        </div>
-                    </div>
-                </sc-for></div>
+            <div class="filterbar">
+      {% for category in site.categories %}
+        <button class="fchip">{{ category[0] }}</button>
+      {% endfor %}
+    </div>
+
+    {% assign featured = site.posts | where: "featured", true | first %}
+
+    {% if featured %}
+      <div class="featured">
+        <div class="featcover {{ featured.categories | first | downcase }}">
+          <div class="grido"></div>
+          <div class="covwm">{{ featured.title | truncate: 18 }}</div>
+        </div>
+
+        <div class="featbody">
+          <span class="featpill">★ À la une · {{ featured.categories | first }}</span>
+          <div class="feattitle">{{ featured.title }}</div>
+          <p class="featexc">{{ featured.excerpt | strip_html }}</p>
+
+          <div class="acmeta" style="margin-top:20px">
+            <span>{{ featured.date | date: "%d %b %Y" }}</span>
+            <span class="dotsep"></span>
+            <span>{{ featured.content | reading_time }} min</span>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="grid3">
+      {% for post in site.posts %}
+        <div class="acard">
+          <div class="cover {{ post.categories | first | downcase }}">
+            <div class="grido"></div>
+            <div class="covwm">{{ post.title | truncate: 18 }}</div>
+            <div class="covtag">{{ post.categories | first }}</div>
+          </div>
+
+          <div class="acbody">
+            <div class="actitle">
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </div>
+            <div class="acexc">{{ post.excerpt | strip_html }}</div>
+
+            <div class="acmeta">
+              <span>{{ post.date | date: "%d %b %Y" }}</span>
+              <span class="dotsep"></span>
+              <span>{{ post.content | reading_time }} min</span>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
         </div>
     </section>
 </div>
