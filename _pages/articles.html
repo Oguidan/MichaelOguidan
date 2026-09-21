@@ -73,23 +73,3 @@ layout: default
     </section>
 </div>
 
-<script>
-    const chips = document.querySelectorAll('.fchip');
-    const cards = document.querySelectorAll('.acard');
-
-    chips.forEach((chip) => {
-        chip.addEventListener('click', () => {
-            const filter = chip.dataset.filter;
-
-            chips.forEach((c) => c.classList.remove('is-active'));
-            chip.classList.add('is-active');
-
-            cards.forEach((card) => {
-                const categories = card.dataset.category.split(' ');
-                const visible = filter === 'all' || categories.includes(filter);
-
-                card.style.display = visible ? 'block' : 'none';
-            });
-        });
-    });
-</script>
