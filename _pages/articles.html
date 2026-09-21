@@ -47,7 +47,7 @@ layout: default
 
             <div class="grid3">
                 {% for post in site.posts %}
-                <div class="acard">
+                <div class="acard" data-category="{{ post.categories | first | slugify }}">
                     <div class="cover {{ post.categories | first | downcase }}">
                         <div class="grido"></div>
                         <div class="covwm">{{ post.title | truncate: 18 }}</div>
