@@ -3,6 +3,21 @@
   padding: 60px 0 8px
 }
 
+.pagetitle {
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -.025em;
+  margin: 12px 0 0
+}
+
+.pagelede {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 14px 0 0;
+  max-width: 560px
+}
+
 /* ARTICLE CARDS */
 .grid3 {
   display: grid;
