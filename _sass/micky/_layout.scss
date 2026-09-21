@@ -1,3 +1,11 @@
+/* FILTER */
+.filterbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 30px
+}
+
 /* PAGE HEAD */
 .pagehead {
   padding: 60px 0 8px
