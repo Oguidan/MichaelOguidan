@@ -17,9 +17,9 @@ layout: default
     <section class="section" style="padding-top:36px">
         <div class="container">
             <div class="filterbar">
-                <button type="button" class="fchip is-active" data-filter="all">All</button>
+                <a class="fchip is-active" data-filter="all">All</a>
                 {% for category in site.categories %}
-                <button type="button" class="fchip" data-filter="{{ category[0] | slugify }}">{{ category[0] }}</button>
+                <a class="fchip" data-filter="{{ category[0] | slugify }}">{{ category[0] }}</a>
                 {% endfor %}
             </div>
 
