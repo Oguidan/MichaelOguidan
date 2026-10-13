@@ -12,13 +12,11 @@ layout: default
             <p class="pagelede">Tout ce que j'apprends en construisant des systèmes — architecture, DevOps, données et
                 leadership technique.</p>
         </div>
-        <a href="{{ '/' | relative_url }}" class="btn">test button</a>
-        <a class="navlink" rel="author" href="{{ "/" | relative_url }}">About</a>
     </div>
     <section class="section" style="padding-top:36px">
         <div class="container">
             <div class="filterbar">
-                <button type="button" class="fchip is-active" data-filter="all">All</button>
+                <button type="button" class="fchip on" data-filter="all">All</button>
                 {% for category in site.categories %}
                 <button type="button" class="fchip" data-filter="{{ category[0] | slugify }}">{{ category[0] }}</button>
                 {% endfor %}
@@ -83,8 +81,8 @@ layout: default
         button.addEventListener('click', () => {
             const filter = button.dataset.filter;
 
-            filterButtons.forEach((item) => item.classList.remove('is-active'));
-            button.classList.add('is-active');
+            filterButtons.forEach((item) => item.classList.remove('on'));
+            button.classList.add('on');
 
             articleCards.forEach((card) => {
                 const category = card.dataset.category;
