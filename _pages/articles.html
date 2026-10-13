@@ -25,7 +25,7 @@ layout: default
             {% assign featured = site.posts | where: "featured", true | first %}
 
             {% if featured %}
-            <div class="featured">
+            <div class="featured" data-category="{{ featured.categories | first | slugify }}">
                 <div class="featcover {{ featured.categories | first | downcase }}">
                     <div class="grido"></div>
                     <div class="covwm">{{ featured.title | truncate: 18 }}</div>
@@ -74,19 +74,38 @@ layout: default
 </div>
 
 <script>
-    const filterButtons = document.querySelectorAll('.fchip');
-    const articleCards = document.querySelectorAll('.acard');
+    document.addEventListener('DOMContentLoaded', () => {
+        const filterButtons = document.querySelectorAll('.fchip');
+        const articleCards = document.querySelectorAll('.acard');
+        const featuredCard = document.querySelector('.featured');
 
-    filterButtons.forEach((button) => {
-        button.addEventListener('click', () => {
-            const filter = button.dataset.filter;
-
-            filterButtons.forEach((item) => item.classList.remove('on'));
-            button.classList.add('on');
-
+        const applyFilter = (filter) => {
             articleCards.forEach((card) => {
-                const category = card.dataset.category;
-                card.style.display = filter === 'all' || category === filter ? '' : 'none';
+                const category = (card.dataset.category || '').trim();
+                const show = filter === 'all' || category === filter;
+                card.hidden = !show;
+                card.style.display = show ? '' : 'none';
+            });
+
+            if (featuredCard) {
+                const featuredCategory = (featuredCard.dataset.category || '').trim();
+                const showFeatured = filter === 'all' || featuredCategory === filter;
+                featuredCard.hidden = !showFeatured;
+                featuredCard.style.display = showFeatured ? '' : 'none';
+            }
+        };
+
+        filterButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const filter = button.dataset.filter;
+
+                filterButtons.forEach((item) => {
+                    const isActive = item === button;
+                    item.classList.toggle('on', isActive);
+                    item.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+                });
+
+                applyFilter(filter);
             });
         });
     });
