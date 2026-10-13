@@ -74,3 +74,22 @@ layout: default
     </section>
 </div>
 
+<script>
+    const filterButtons = document.querySelectorAll('.fchip');
+    const articleCards = document.querySelectorAll('.acard');
+
+    filterButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const filter = button.dataset.filter;
+
+            filterButtons.forEach((item) => item.classList.remove('is-active'));
+            button.classList.add('is-active');
+
+            articleCards.forEach((card) => {
+                const category = card.dataset.category;
+                card.style.display = filter === 'all' || category === filter ? '' : 'none';
+            });
+        });
+    });
+</script>
+
