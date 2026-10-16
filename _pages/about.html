@@ -4,101 +4,109 @@ permalink: /about
 layout: default
 ---
 
-<div data-screen-label="Articles">
-    <div class="pagehead">
-        <div class="container">
-            <div class="kicker">The Journal</div>
-            <h1 class="pagetitle">Articles</h1>
-            <p class="pagelede">Everything I learn while building systems — architecture, DevOps, data, and technical leadership.</p>
+<sc-if value="{{ showAbout }}" hint-placeholder-val="{{ true }}">
+    <div data-screen-label="À propos">
+        <div class="container abouthero">
+            <div>
+                <div class="kicker">À propos</div>
+                <h1 class="pagetitle" style="margin-top:9px">Construire des choses qui durent.</h1>
+                <div class="bodytext" style="margin-top:24px">
+                    <p>Je suis Michael Oguidan, Software Engineer. Mon métier consiste à transformer des problèmes
+                        complexes
+                        en systèmes simples, robustes et performants — du backend jusqu'à l'infrastructure qui le fait
+                        tourner.</p>
+                    <p>J'évolue à l'intersection de plusieurs mondes : le développement bas niveau en C/C++ et Go,
+                        l'écosystème data et machine learning en Python, et la culture DevOps / Cloud qui permet de
+                        livrer
+                        vite et sereinement. Cette polyvalence me permet de raisonner sur l'ensemble de la chaîne, du
+                        premier
+                        commit jusqu'à la production.</p>
+                    <p>Au-delà du code, je crois beaucoup en la collaboration : faire grandir une équipe, partager le
+                        contexte et garder le pragmatisme comme boussole. Ce blog est mon carnet de bord — un endroit
+                        pour
+                        structurer mes idées et rendre ce que j'apprends.</p>
+                </div>
+                <div class="blockh">Domaines d'expertise</div>
+                <div class="skillgrid">
+                    <div class="skillcard">
+                        <h4><span class="sicon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M8 3H5a2 2 0 0 0-2 2v3m0 8v3a2 2 0 0 0 2 2h3m8 0h3a2 2 0 0 0 2-2v-3m0-8V5a2 2 0 0 0-2-2h-3" />
+                                </svg></span>Backend & Systèmes</h4>
+                        <p>Go, C/C++, Python · APIs performantes, services distribués, concurrence et optimisation.</p>
+                    </div>
+                    <div class="skillcard">
+                        <h4><span class="sicon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M3 15a4 4 0 0 0 4 4h9a5 5 0 0 0 .8-9.9A7 7 0 1 0 4 11" />
+                                </svg></span>Cloud & DevOps</h4>
+                        <p>CI/CD, GitOps, conteneurs, IaC · industrialiser le déploiement et l'observabilité.</p>
+                    </div>
+                    <div class="skillcard">
+                        <h4><span class="sicon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M3 3v18h18M7 14l4-4 3 3 5-5" />
+                                </svg></span>Data Science</h4>
+                        <p>Pipelines de données, modélisation, analyse · de la donnée brute à la décision.</p>
+                    </div>
+                    <div class="skillcard">
+                        <h4><span class="sicon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8m14 10v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+                                </svg></span>Leadership technique</h4>
+                        <p>Mentorat, revue de code, vision produit · faire avancer l'équipe et le code ensemble.</p>
+                    </div>
+                </div>
+                <div class="blockh">Parcours</div>
+                <div class="timeline">
+                    <div class="tlitem">
+                        <div class="tldot"></div>
+                        <div class="tlrole">Senior Software Engineer</div>
+                        <div class="tlco mono">Plateforme Data & Cloud</div>
+                        <div class="tldate mono">2023 — aujourd'hui</div>
+                        <p class="tldesc">Conception de services backend en Go et de pipelines temps réel ; pilotage de
+                            la
+                            stratégie DevOps et accompagnement technique de l'équipe.</p>
+                    </div>
+                    <div class="tlitem">
+                        <div class="tldot"></div>
+                        <div class="tlrole">Software Engineer</div>
+                        <div class="tlco mono">Produits IT & Innovation</div>
+                        <div class="tldate mono">2021 — 2023</div>
+                        <p class="tldesc">Développement d'applications data en Python, mise en place de l'intégration
+                            continue
+                            et migration progressive vers le cloud.</p>
+                    </div>
+                    <div class="tlitem">
+                        <div class="tldot"></div>
+                        <div class="tlrole">Développeur</div>
+                        <div class="tlco mono">Systèmes & Performance</div>
+                        <div class="tldate mono">2019 — 2021</div>
+                        <p class="tldesc">Optimisation de moteurs de calcul en C/C++ et premières expériences terrain
+                            sur des
+                            systèmes critiques.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="profilecard">
+                <div class="profileav">MO</div>
+                <div class="proname">Michael Oguidan</div>
+                <div class="prorole">Software Engineer<br>Python · Go · C/C++ · DevOps · Cloud · Data Science</div>
+                <div class="prosoc"><a class="iconbtn" href="https://www.linkedin.com/in/michael-oguidan-b642361a6/"
+                        target="_blank" title="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path
+                                d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
+                        </svg></a><a class="iconbtn" href="https://github.com/Oguidan" target="_blank"
+                        title="GitHub"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z" />
+                        </svg></a></div><a class="btn btn-ghost btn-sm"
+                    style="margin-top:18px;width:100%;justify-content:center" onClick="{{ goContact }}">Travaillons
+                    ensemble</a>
+            </div>
         </div>
     </div>
-    <section class="section" style="padding-top:36px">
-        <div class="container">
-            <div class="filterbar">
-                <button type="button" class="fchip on" data-filter="all">All</button>
-                {% for category in site.categories %}
-                <button type="button" class="fchip" data-filter="{{ category[0] | slugify }}">{{ category[0] }}</button>
-                {% endfor %}
-            </div>
-
-            {% assign featured = site.posts | where: "featured", true | first %}
-
-            {% if featured %}
-            <div class="featured">
-                <div class="featcover {{ featured.cover }}">
-                    <div class="grido"></div>
-                    <div class="covwm">{{ featured.categories | first | truncate: 18 }}</div>
-                </div>
-
-                <div class="featbody">
-                    <span class="featpill">★ À la une · {{ featured.topic }}</span>
-                    <div class="feattitle">{{ featured.title }}</div>
-                    <p class="featexc">{{ featured.excerpt | strip_html }}</p>
-
-                    <div class="acmeta" style="margin-top:20px">
-                        <span>{{ featured.date | date: "%d %b %Y" }}</span>
-                        <span class="dotsep"></span>
-                        <span>{{ featured.read | reading_time }} min</span>
-                    </div>
-                </div>
-            </div>
-            {% endif %}
-
-            <div class="grid3">
-                {% for post in site.posts %}
-                <div class="acard" data-category="{{ post.categories | first | slugify }}">
-                    <div class="cover {{ post.cover }} {{ post.categories | first | downcase }}">
-                        <div class="grido"></div>
-                        <div class="covwm">{{ post.categories | first | truncate: 18 }}</div>
-                        <div class="covtag">{{ post.topic }}</div>
-                    </div>
-
-                    <div class="acbody">
-                        <div class="actitle">
-                            <a href="{{ post.url }}">{{ post.title }}</a>
-                        </div>
-                        <div class="acexc">{{ post.excerpt | strip_html }}</div>
-
-                        <div class="acmeta">
-                            <span>{{ post.date | date: "%d %b %Y" }}</span>
-                            <span class="dotsep"></span>
-                            <span>{{ post.read | reading_time }} min</span>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
-</div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        // Get buttons and articles cards
-        const filterButtons = document.querySelectorAll('.fchip');
-        const articleCards = document.querySelectorAll('.acard');
-
-        const applyFilter = (filter) => {
-            articleCards.forEach((card) => {
-                const category = (card.dataset.category || '').trim();
-                const show = filter === 'all' || category === filter;
-                card.hidden = !show;
-                card.style.display = show ? '' : 'none';
-            });
-        };
-
-        filterButtons.forEach((button) => {
-            button.addEventListener('click', () => {
-                const filter = button.dataset.filter;
-
-                filterButtons.forEach((item) => {
-                    const isActive = item === button;
-                    item.classList.toggle('on', isActive);
-                    item.setAttribute('aria-pressed', isActive ? 'true' : 'false');
-                });
-
-                applyFilter(filter);
-            });
-        });
-    });
-</script>
+</sc-if>
