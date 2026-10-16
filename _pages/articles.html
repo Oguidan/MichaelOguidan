@@ -50,8 +50,8 @@ layout: default
                 <div class="acard" data-category="{{ post.categories | first | slugify }}">
                     <div class="cover {{ post.categories | first | downcase }}">
                         <div class="grido"></div>
-                        <div class="covwm">{{ post.title | truncate: 18 }}</div>
-                        <div class="covtag">{{ post.categories | first }}</div>
+                        <div class="covwm">{{ post.categories | first | truncate: 18 }}</div>
+                        <div class="covtag">{{ post.topic }}</div>
                     </div>
 
                     <div class="acbody">
@@ -63,7 +63,7 @@ layout: default
                         <div class="acmeta">
                             <span>{{ post.date | date: "%d %b %Y" }}</span>
                             <span class="dotsep"></span>
-                            <span>{{ post.content | reading_time }} min</span>
+                            <span>{{ post.read | reading_time }} min</span>
                         </div>
                     </div>
                 </div>
