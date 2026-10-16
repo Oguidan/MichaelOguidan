@@ -16,19 +16,20 @@
   border-color: color-mix(in srgb, var(--accent) 30%, var(--border));
 }
 
+.featcover {
+  position: relative;
+  min-height: 300px;
+}
+
 /* FILTER */
 .filterbar {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 30px;
-  position: relative;
-  z-index: 10;
 }
 
 .fchip {
-  position: relative;
-  z-index: 1;
   font-size: 13px;
   font-weight: 500;
   color: var(--muted);
