@@ -25,7 +25,7 @@ layout: default
             {% assign featured = site.posts | where: "featured", true | first %}
 
             {% if featured %}
-            <div class="featured">
+            <div class="featured {{ featured.cover }}">
                 <div class="featcover">
                     <div class="grido"></div>
                     <div class="covwm">{{ featured.categories | truncate: 18 }}</div>
