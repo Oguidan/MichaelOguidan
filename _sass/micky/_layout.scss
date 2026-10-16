@@ -21,6 +21,12 @@
   min-height: 200px;
 }
 
+.featbody {
+  padding: 22px 24px 26px;
+  display: flex;
+  flex-direction: column;
+}
+
 /* FILTER */
 .filterbar {
   display: flex;
