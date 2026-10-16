@@ -1,3 +1,21 @@
+/* FEATURED */
+.featured {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .24s;
+  margin-bottom: 22px;
+}
+
+.featured:hover {
+  box-shadow: var(--shadow);
+  border-color: color-mix(in srgb, var(--accent) 30%, var(--border));
+}
+
 /* FILTER */
 .filterbar {
   display: flex;
