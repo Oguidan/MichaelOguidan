@@ -36,11 +36,11 @@ layout: default
                     <div class="feattitle">{{ featured.title }}</div>
                     <p class="featexc">{{ featured.excerpt | strip_html }}</p>
 
-                    <!-- <div class="acmeta" style="margin-top:20px">
+                    <div class="acmeta" style="margin-top:20px">
                         <span>{{ featured.date | date: "%d %b %Y" }}</span>
                         <span class="dotsep"></span>
-                        <span>{{ featured.content | reading_time }} min</span>
-                    </div> -->
+                        <span>{{ featured.read | reading_time }} min</span>
+                    </div>
                 </div>
             </div>
             {% endif %}
