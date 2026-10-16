@@ -1,0 +1,104 @@
+---
+id: about
+permalink: /about
+layout: default
+---
+
+<div data-screen-label="Articles">
+    <div class="pagehead">
+        <div class="container">
+            <div class="kicker">The Journal</div>
+            <h1 class="pagetitle">Articles</h1>
+            <p class="pagelede">Everything I learn while building systems — architecture, DevOps, data, and technical leadership.</p>
+        </div>
+    </div>
+    <section class="section" style="padding-top:36px">
+        <div class="container">
+            <div class="filterbar">
+                <button type="button" class="fchip on" data-filter="all">All</button>
+                {% for category in site.categories %}
+                <button type="button" class="fchip" data-filter="{{ category[0] | slugify }}">{{ category[0] }}</button>
+                {% endfor %}
+            </div>
+
+            {% assign featured = site.posts | where: "featured", true | first %}
+
+            {% if featured %}
+            <div class="featured">
+                <div class="featcover {{ featured.cover }}">
+                    <div class="grido"></div>
+                    <div class="covwm">{{ featured.categories | first | truncate: 18 }}</div>
+                </div>
+
+                <div class="featbody">
+                    <span class="featpill">★ À la une · {{ featured.topic }}</span>
+                    <div class="feattitle">{{ featured.title }}</div>
+                    <p class="featexc">{{ featured.excerpt | strip_html }}</p>
+
+                    <div class="acmeta" style="margin-top:20px">
+                        <span>{{ featured.date | date: "%d %b %Y" }}</span>
+                        <span class="dotsep"></span>
+                        <span>{{ featured.read | reading_time }} min</span>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            <div class="grid3">
+                {% for post in site.posts %}
+                <div class="acard" data-category="{{ post.categories | first | slugify }}">
+                    <div class="cover {{ post.cover }} {{ post.categories | first | downcase }}">
+                        <div class="grido"></div>
+                        <div class="covwm">{{ post.categories | first | truncate: 18 }}</div>
+                        <div class="covtag">{{ post.topic }}</div>
+                    </div>
+
+                    <div class="acbody">
+                        <div class="actitle">
+                            <a href="{{ post.url }}">{{ post.title }}</a>
+                        </div>
+                        <div class="acexc">{{ post.excerpt | strip_html }}</div>
+
+                        <div class="acmeta">
+                            <span>{{ post.date | date: "%d %b %Y" }}</span>
+                            <span class="dotsep"></span>
+                            <span>{{ post.read | reading_time }} min</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Get buttons and articles cards
+        const filterButtons = document.querySelectorAll('.fchip');
+        const articleCards = document.querySelectorAll('.acard');
+
+        const applyFilter = (filter) => {
+            articleCards.forEach((card) => {
+                const category = (card.dataset.category || '').trim();
+                const show = filter === 'all' || category === filter;
+                card.hidden = !show;
+                card.style.display = show ? '' : 'none';
+            });
+        };
+
+        filterButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const filter = button.dataset.filter;
+
+                filterButtons.forEach((item) => {
+                    const isActive = item === button;
+                    item.classList.toggle('on', isActive);
+                    item.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+                });
+
+                applyFilter(filter);
+            });
+        });
+    });
+</script>
