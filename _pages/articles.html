@@ -25,8 +25,8 @@ layout: default
             {% assign featured = site.posts | where: "featured", true | first %}
 
             {% if featured %}
-            <div class="featured" data-category="{{ featured.categories | first | slugify }}">
-                <div class="featcover {{ featured.categories | first | downcase }}">
+            <div class="featured">
+                <div class="featcover">
                     <div class="grido"></div>
                     <div class="covwm">{{ featured.title | truncate: 18 }}</div>
                 </div>
@@ -75,9 +75,9 @@ layout: default
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
+        // Get buttons and articles cards
         const filterButtons = document.querySelectorAll('.fchip');
         const articleCards = document.querySelectorAll('.acard');
-        const featuredCard = document.querySelector('.featured');
 
         const applyFilter = (filter) => {
             articleCards.forEach((card) => {
@@ -86,13 +86,6 @@ layout: default
                 card.hidden = !show;
                 card.style.display = show ? '' : 'none';
             });
-
-            if (featuredCard) {
-                const featuredCategory = (featuredCard.dataset.category || '').trim();
-                const showFeatured = filter === 'all' || featuredCategory === filter;
-                featuredCard.hidden = !showFeatured;
-                featuredCard.style.display = showFeatured ? '' : 'none';
-            }
         };
 
         filterButtons.forEach((button) => {
