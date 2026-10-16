@@ -35,11 +35,14 @@
     {%- assign current_page = page.url | default: "/" -%}
     {%- assign homeActive = "" -%}
     {%- assign articlesActive = "" -%}
+    {%- assign aboutActive = "" -%}
 
     {% if current_page == "/articles" %}
       {% assign articlesActive = "active" %}
     {% elsif current_page == "/" %}
       {% assign homeActive = "active" %}
+    {% elsif current_page == "/about" %}
+      {% assign aboutActive = "active" %}
     {% endif %}
 
     <nav class="nav">
@@ -56,7 +59,7 @@
         <div class="navlinks">
           <a class="navlink {{ homeActive }}" rel="author" href="{{ "/" | relative_url }}">Home</a>
           <a class="navlink {{ articlesActive }}" rel="author" href="{{ "/articles" | relative_url }}">Articles</a>
-          <a class="navlink" rel="author" href="{{ "/about" | relative_url }}">About</a>
+          <a class="navlink {{ aboutActive }}" rel="author" href="{{ "/about" | relative_url }}">About</a>
         </div>
         <div class="navact">
           <button class="iconbtn" onClick="{{ toggleTheme }}" title="{{ site.themeTitle }}">{{ site.themeIcon }}</button>
