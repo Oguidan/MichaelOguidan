@@ -28,11 +28,11 @@ layout: default
             <div class="featured">
                 <div class="featcover">
                     <div class="grido"></div>
-                    <div class="covwm">{{ featured.title | truncate: 18 }}</div>
+                    <div class="covwm">{{ featured.categories | truncate: 18 }}</div>
                 </div>
 
                 <div class="featbody">
-                    <span class="featpill">★ À la une · {{ featured.categories | first }}</span>
+                    <span class="featpill">★ À la une · {{ featured.topic | first }}</span>
                     <div class="feattitle">{{ featured.title }}</div>
                     <p class="featexc">{{ featured.excerpt | strip_html }}</p>
 
