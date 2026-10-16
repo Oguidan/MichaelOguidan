@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Architecturer un pipeline de données temps réel avec Go et Kafka"
-categories: STREAM
+categories: STREAM-Test
 cover: cover-data
 topic: Data Science
 description: Concevoir un pipeline d’ingestion résilient capable d’absorber des millions d’événements par minute — sans sacrifier la lisibilité du code.
