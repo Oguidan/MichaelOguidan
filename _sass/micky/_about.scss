@@ -111,3 +111,12 @@
     border-left: 2x solid var(--border);
     padding-left: 26px
 }
+
+.tlitem {
+    position: relative;
+    margin-bottom: 26px;
+}
+
+.tlitem:last-child {
+    padding-bottom: 0;
+}
