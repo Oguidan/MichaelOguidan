@@ -3,7 +3,7 @@
 
     <nav class="nav">
       <div class="container navwrap">
-        <a class="navlink" rel="author" href="{{ "/" | relative_url }}">
+        <a class="navlink" rel="author" href="{{ " /" | relative_url }}">
           <div class="brand">
             <div class="logo">MO</div>
             <div>
@@ -56,6 +56,12 @@
       appElements.forEach(function (element) {
         element.classList.toggle("dark", theme === "dark");
       });
+      const nextTheme = theme === "dark" ? "light" : "dark";
+      const label = `Switch to ${nextTheme} mode`;
+
+      themeToggleBtn.textContent = nextTheme === "dark" ? "🌙" : "☀️";
+      themeToggleBtn.title = label;
+      themeToggleBtn.setAttribute("aria-label", label);
     }
 
     applyTheme(initialTheme);
