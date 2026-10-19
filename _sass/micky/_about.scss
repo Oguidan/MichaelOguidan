@@ -1,0 +1,8 @@
+/* ABOUT */
+.abouthero {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 48px;
+    align-items: start;
+    padding: 56px 0;
+}
