@@ -6,3 +6,27 @@
     align-items: start;
     padding: 56px 0;
 }
+
+.profilecard {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 26px;
+    text-align: center;
+    position: sticky;
+    top: 88px;
+}
+
+.profileav {
+    width: 96px;
+    height: 96px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, var(--accent), #1e3a8a);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 34px;
+    margin: 0 auto 16px;
+}
