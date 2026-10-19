@@ -108,7 +108,7 @@
 
 .timeline {
     margin-top: 14px;
-    border-left: 2x solid var(--border);
+    border-left: 2px solid var(--border);
     padding-left: 26px
 }
 
@@ -135,4 +135,11 @@
 .tlrole {
     font-size: 16px;
     font-weight: 600;
+}
+
+.tlco {
+    font-size: 13px;
+    color: var(--accent);
+    font-family: 'IBM Plex Mono', monospace;
+    margin-top: 2px;
 }
