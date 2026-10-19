@@ -31,7 +31,8 @@
           <a class="navlink {{ aboutActive }}" rel="author" href="{{ " /about" | relative_url }}">About</a>
         </div>
         <div class="navact">
-          <button class="iconbtn" onClick="{{ toggleTheme }}" title="{{ site.themeTitle }}">{{ site.themeIcon
+          <button class="iconbtn toggleThemeBtn" onClick="{{ toggleTheme }}" title="{{ site.themeTitle }}">{{
+            site.themeIcon
             }}</button>
           <a class="iconbtn" href="https://github.com/Oguidan" target="_blank" title="GitHub"><svg width="17"
               height="17" viewBox="0 0 24 24" fill="currentColor">
@@ -45,13 +46,30 @@
 </header>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const themeToggleBtn = document.querySelector(".iconbtn[onClick='{{ toggleTheme }}']");
-    themeToggleBtn.addEventListener("click", function() {
-      const currentTheme = document.documentElement.getAttribute("data-themeClass");
-      const newTheme = currentTheme === "dark" ? "light" : "dark";
-      document.documentElement.setAttribute("data-themeClass", newTheme);
+  document.addEventListener("DOMContentLoaded", function () {
+    const themeToggleBtn = document.querySelector(".toggleThemeBtn");
+    const appElements = document.querySelectorAll(".app");
+    const savedTheme = localStorage.getItem("themeClass");
+    const initialTheme =
+      savedTheme ||
+      (document.querySelector(".app")?.classList.contains("dark")
+        ? "dark"
+        : "light");
+
+    function applyTheme(theme) {
+      appElements.forEach(function (element) {
+        element.classList.toggle("dark", theme === "dark");
+      });
+    }
+
+    applyTheme(initialTheme);
+
+    themeToggleBtn.addEventListener("click", function () {
+      const isDark = document.querySelector(".app")?.classList.contains("dark");
+      const newTheme = isDark ? "light" : "dark";
+
+      applyTheme(newTheme);
       localStorage.setItem("themeClass", newTheme);
     });
-  })
+  });
 </script>
