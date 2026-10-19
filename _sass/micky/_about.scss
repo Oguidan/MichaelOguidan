@@ -150,3 +150,20 @@
     font-family: 'IBM Plex Mono', monospace;
     margin-top: 5px
 }
+
+.tldesc {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--muted);
+    margin-top: 8px;
+}
+
+.blockh {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--faint);
+    font-family: 'IBM Plex Mono', monospace;
+    margin: 42px 0 14px
+}
