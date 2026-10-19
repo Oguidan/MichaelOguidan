@@ -43,3 +43,15 @@
     </nav>
   </div>
 </header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const themeToggleBtn = document.querySelector(".iconbtn[onClick='{{ toggleTheme }}']");
+    themeToggleBtn.addEventListener("click", function() {
+      const currentTheme = document.documentElement.getAttribute("data-themeClass");
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-themeClass", newTheme);
+      localStorage.setItem("themeClass", newTheme);
+    });
+  })
+</script>
