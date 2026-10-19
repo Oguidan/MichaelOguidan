@@ -16,7 +16,7 @@
 
     <nav class="nav">
       <div class="container navwrap">
-        <a class="navlink" rel="author" href="{{ " /" | relative_url }}">
+        <a class="navlink" rel="author" href="{{ "/" | relative_url }}">
           <div class="brand">
             <div class="logo">MO</div>
             <div>
@@ -26,9 +26,9 @@
           </div>
         </a>
         <div class="navlinks">
-          <a class="navlink {{ homeActive }}" rel="author" href="{{ " /" | relative_url }}">Home</a>
-          <a class="navlink {{ articlesActive }}" rel="author" href="{{ " /articles" | relative_url }}">Articles</a>
-          <a class="navlink {{ aboutActive }}" rel="author" href="{{ " /about" | relative_url }}">About</a>
+          <a class="navlink {{ homeActive }}" rel="author" href="{{ "/" | relative_url }}">Home</a>
+          <a class="navlink {{ articlesActive }}" rel="author" href="{{ "/articles" | relative_url }}">Articles</a>
+          <a class="navlink {{ aboutActive }}" rel="author" href="{{ "/about" | relative_url }}">About</a>
         </div>
         <div class="navact">
           <button class="iconbtn toggleThemeBtn" onClick="{{ toggleTheme }}" title="{{ site.themeTitle }}">{{
