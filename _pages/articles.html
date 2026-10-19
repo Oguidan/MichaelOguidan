@@ -46,6 +46,7 @@ layout: default
 
             <div class="grid3">
                 {% for post in site.posts %}
+                <a href="{{ post.url | relative_url}}">
                 <div class="acard" data-category="{{ post.categories | first | slugify }}">
                     <div class="cover {{ post.cover }} {{ post.categories | first | downcase }}">
                         <div class="grido"></div>
@@ -66,6 +67,7 @@ layout: default
                         </div>
                     </div>
                 </div>
+                </a>
                 {% endfor %}
             </div>
         </div>
