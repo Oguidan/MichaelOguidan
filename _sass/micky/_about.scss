@@ -120,3 +120,14 @@
 .tlitem:last-child {
     padding-bottom: 0;
 }
+
+.tldot {
+    position: absolute;
+    left: -31px;
+    top: 3px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 3px solid var(--bg);
+}
