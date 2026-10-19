@@ -64,3 +64,10 @@
     font-size: 20px;
     color: var(--text);
 }
+
+.skillgrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 14px;
+}
