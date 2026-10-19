@@ -14,18 +14,17 @@
         </a>
         <div class="navlinks">
           {% for item in site.navigation %}
-    {% assign is_active = false %}
-    {% if page.url == item.url %}
-      {% assign is_active = true %}
-    {% elsif item.url == "/articles" and page.collection == "posts" %}
-      {% assign is_active = true %}
-    {% endif %}
+          {% assign is_active = false %}
+          {% if page.url == item.url %}
+          {% assign is_active = true %}
+          {% elsif item.url == "/articles" and page.collection == "posts" %}
+          {% assign is_active = true %}
+          {% endif %}
 
-    <a class="navlink{% if is_active %} active{% endif %}"
-       href="{{ item.url | relative_url }}">
-      {{ item.title }}
-    </a>
-  {% endfor %}
+          <a class="navlink{% if is_active %} active{% endif %}" href="{{ item.url | relative_url }}">
+            {{ item.title }}
+          </a>
+          {% endfor %}
         </div>
         <div class="navact">
           <button class="iconbtn toggleThemeBtn" onClick="{{ toggleTheme }}" title="{{ site.themeTitle }}">{{
