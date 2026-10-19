@@ -94,3 +94,14 @@
     line-height: 1.55;
     color: var(--muted);
 }
+
+.sicon {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background: var(--accent-bg);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
