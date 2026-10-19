@@ -46,8 +46,8 @@ layout: default
 
             <div class="grid3">
                 {% for post in site.posts %}
+                <a href="{{ post.url | relative_url}}">
                 <div class="acard" data-category="{{ post.categories | first | slugify }}">
-                    <a href="{{ post.url | relative_url}}">
                     <div class="cover {{ post.cover }} {{ post.categories | first | downcase }}">
                         <div class="grido"></div>
                         <div class="covwm">{{ post.categories | first | truncate: 18 }}</div>
@@ -66,8 +66,8 @@ layout: default
                             <span>{{ post.read | reading_time }} min</span>
                         </div>
                     </div>
-                    </a>
                 </div>
+                </a>
                 {% endfor %}
             </div>
         </div>
