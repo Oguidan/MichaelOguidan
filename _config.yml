@@ -72,7 +72,7 @@ paginate: 5
 paginate_path: "/page:num/"
 
 navigation:
-  - title: Home
+  - title: Homee
     url: /
   - title: Articles
     url: /articles
