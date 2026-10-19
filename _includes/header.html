@@ -1,19 +1,6 @@
 <header role="banner">
   <div class="app {{ site.themeClass }}" data-screen-label="Blog Michael Oguidan">
 
-    {%- assign current_page = page.url | default: "/" -%}
-    {%- assign homeActive = "" -%}
-    {%- assign articlesActive = "" -%}
-    {%- assign aboutActive = "" -%}
-
-    {% if current_page == "/articles" %}
-    {% assign articlesActive = "active" %}
-    {% elsif current_page == "/" %}
-    {% assign homeActive = "active" %}
-    {% elsif current_page == "/about" %}
-    {% assign aboutActive = "active" %}
-    {% endif %}
-
     <nav class="nav">
       <div class="container navwrap">
         <a class="navlink" rel="author" href="{{ "/" | relative_url }}">
@@ -26,9 +13,19 @@
           </div>
         </a>
         <div class="navlinks">
-          <a class="navlink {{ homeActive }}" rel="author" href="{{ "/" | relative_url }}">Home</a>
-          <a class="navlink {{ articlesActive }}" rel="author" href="{{ "/articles" | relative_url }}">Articles</a>
-          <a class="navlink {{ aboutActive }}" rel="author" href="{{ "/about" | relative_url }}">About</a>
+          {% for item in site.navigation %}
+    {% assign is_active = false %}
+    {% if page.url == item.url %}
+      {% assign is_active = true %}
+    {% elsif item.url == "/articles" and page.collection == "posts" %}
+      {% assign is_active = true %}
+    {% endif %}
+
+    <a class="navlink{% if is_active %} active{% endif %}"
+       href="{{ item.url | relative_url }}">
+      {{ item.title }}
+    </a>
+  {% endfor %}
         </div>
         <div class="navact">
           <button class="iconbtn toggleThemeBtn" onClick="{{ toggleTheme }}" title="{{ site.themeTitle }}">{{

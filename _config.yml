@@ -70,3 +70,11 @@ sass:
 
 paginate: 5
 paginate_path: "/page:num/"
+
+navigation:
+  - title: Home
+    url: /
+  - title: Articles
+    url: /articles
+  - title: About
+    url: /about
