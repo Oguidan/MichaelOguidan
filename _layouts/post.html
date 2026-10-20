@@ -1,6 +1,61 @@
 ---
 layout: default
 ---
+<article class="narrow artwrap" data-screen-label="Article"><a class="backlink" onClick="{{ goArticles }}"><svg
+              width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M19 12H5M11 18l-6-6 6-6" />
+            </svg> Tous les articles</a>
+          <div class="artmeta"><span class="artcat">{{ current.cat }}</span><span class="dotsep"></span><span>{{
+              current.date }}</span><span class="dotsep"></span><span>{{ current.read }} de lecture</span></div>
+          <h1 class="arttitle">{{ current.title }}</h1>
+          <div class="artauthor">
+            <div class="avatar">MO</div>
+            <div>
+              <div class="aname">Michael Oguidan</div>
+              <div class="arole">Software Engineer · Python, Go, Cloud &amp; Data</div>
+            </div>
+          </div>
+          <div class="artcover {{ current.cov }}">
+            <div class="grido"></div>
+            <div class="covwm">{{ current.wm }}</div>
+          </div>
+          <sc-for list="{{ current.body }}" as="b" hint-placeholder-count="6">
+            <sc-if value="{{ b.isP }}" hint-placeholder-val="{{ true }}">
+              <p class="abody">{{ b.text }}</p>
+            </sc-if>
+            <sc-if value="{{ b.isH2 }}" hint-placeholder-val="{{ false }}">
+              <h2 class="abody-h2">{{ b.text }}</h2>
+            </sc-if>
+            <sc-if value="{{ b.isCode }}" hint-placeholder-val="{{ false }}">
+              <pre class="code"><code>{{ b.text }}</code></pre>
+            </sc-if>
+            <sc-if value="{{ b.isQuote }}" hint-placeholder-val="{{ false }}">
+              <blockquote class="aq">{{ b.text }}</blockquote>
+            </sc-if>
+          </sc-for>
+          <div class="arttags"><sc-for list="{{ current.tags }}" as="t" hint-placeholder-count="3"><span class="tag">#
+                {{ t }}</span></sc-for></div>
+          <div class="authorcard">
+            <div class="bigav">MO</div>
+            <div>
+              <div class="aname" style="font-size:15px">Écrit par Michael Oguidan</div>
+              <p style="margin:6px 0 0;font-size:14px;line-height:1.55;color:var(--muted)">Software Engineer passionné
+                par les systèmes distribués, l'automatisation et la donnée. J'écris pour clarifier ma pensée et partager
+                ce qui marche vraiment sur le terrain.</p>
+              <div class="prosoc" style="justify-content:flex-start;margin-top:12px"><a class="iconbtn"
+                  href="https://www.linkedin.com/in/michael-oguidan-b642361a6/" target="_blank"><svg width="16"
+                    height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
+                  </svg></a><a class="iconbtn" href="https://github.com/Oguidan" target="_blank"><svg width="16"
+                    height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z" />
+                  </svg></a></div>
+            </div>
+          </div>
+        </article>
+
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
