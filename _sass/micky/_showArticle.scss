@@ -1,0 +1,166 @@
+/* ARTICLE READING */
+.artwrap {
+    padding: 48px 0 30px
+}
+
+.backlink {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    margin-bottom: 26px
+}
+
+.backlink:hover {
+    color: var(--accent);
+    gap: 9px
+}
+
+.artmeta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--faint);
+    font-family: 'IBM Plex Mono', monospace;
+    margin-bottom: 14px
+}
+
+.artcat {
+    color: var(--accent)
+}
+
+h1.arttitle {
+    font-size: 40px;
+    line-height: 1.13;
+    font-weight: 600;
+    letter-spacing: -.025em;
+    text-wrap: balance
+}
+
+.artauthor {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 26px 0 0;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border)
+}
+
+.avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #1e3a8a);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 15px
+}
+
+.aname {
+    font-size: 14px;
+    font-weight: 600
+}
+
+.arole {
+    font-size: 12px;
+    color: var(--faint)
+}
+
+.artcover {
+    height: 260px;
+    border-radius: 16px;
+    margin: 30px 0 8px;
+    position: relative;
+    overflow: hidden
+}
+
+.abody {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 19px;
+    line-height: 1.72;
+    color: var(--text);
+    margin: 24px 0 0
+}
+
+.abody-h2 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    letter-spacing: -.01em;
+    margin: 38px 0 0
+}
+
+.code {
+    background: var(--code);
+    color: var(--codetx);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13.5px;
+    line-height: 1.7;
+    padding: 18px 20px;
+    border-radius: 12px;
+    margin: 26px 0 0;
+    overflow-x: auto;
+    white-space: pre;
+    border: 1px solid color-mix(in srgb, #fff 7%, transparent)
+}
+
+blockquote.aq {
+    margin: 28px 0 0;
+    padding: 6px 0 6px 22px;
+    border-left: 3px solid var(--accent);
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 21px;
+    line-height: 1.5;
+    font-style: italic;
+    color: var(--text)
+}
+
+.arttags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 36px 0 0;
+    padding-top: 30px;
+    border-top: 1px solid var(--border)
+}
+
+.tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 6px 12px;
+    border-radius: 7px
+}
+
+.authorcard {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 22px 24px;
+    margin: 30px 0 0
+}
+
+.bigav {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--accent), #1e3a8a);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    flex-shrink: 0
+}
