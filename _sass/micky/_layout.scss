@@ -28,7 +28,7 @@
   justify-content: center;
 }
 
-.featpill{
+.featpill {
   align-self: flex-start;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 11px;
@@ -978,6 +978,12 @@ h1.disp {
       @include relative-font-size(1.125);
     }
   }
+}
+
+.narrow {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 32px
 }
 
 /*
