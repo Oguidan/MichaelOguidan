@@ -26,26 +26,26 @@ layout: default
             {% assign featured = site.posts | where: "featured", true | first %}
 
             {% if featured %}
-            <div class="featured">
-                <a href="{{ featured.url | relative_url}}">
-                    <div class="featcover {{ featured.cover }}">
-                        <div class="grido"></div>
-                        <div class="covwm">{{ featured.categories | first | truncate: 18 }}</div>
-                    </div>
-
-                    <div class="featbody">
-                        <span class="featpill">★ À la une · {{ featured.topic }}</span>
-                        <div class="feattitle">{{ featured.title }}</div>
-                        <p class="featexc">{{ featured.excerpt | strip_html }}</p>
-
-                        <div class="acmeta" style="margin-top:20px">
-                            <span>{{ featured.date | date: "%d %b %Y" }}</span>
-                            <span class="dotsep"></span>
-                            <span>{{ featured.read | reading_time }} min</span>
+            <a href="{{ featured.url | relative_url}}"></a>
+                <div class="featured">
+                        <div class="featcover {{ featured.cover }}">
+                            <div class="grido"></div>
+                            <div class="covwm">{{ featured.categories | first | truncate: 18 }}</div>
                         </div>
-                    </div>
-                </a>
-            </div>
+
+                        <div class="featbody">
+                            <span class="featpill">★ À la une · {{ featured.topic }}</span>
+                            <div class="feattitle">{{ featured.title }}</div>
+                            <p class="featexc">{{ featured.excerpt | strip_html }}</p>
+
+                            <div class="acmeta" style="margin-top:20px">
+                                <span>{{ featured.date | date: "%d %b %Y" }}</span>
+                                <span class="dotsep"></span>
+                                <span>{{ featured.read | reading_time }} min</span>
+                            </div>
+                        </div>
+                </div>
+            </a>
             {% endif %}
 
             <div class="grid3">
