@@ -1,39 +1,3 @@
-<!-- <footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">
-            {%- if site.author -%}
-              {{ site.author | escape }}
-            {%- else -%}
-              {{ site.title | escape }}
-            {%- endif -%}
-            </li>
-            {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {%- endif -%}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        {%- include social.html -%}
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
-      </div>
-    </div>
-
-  </div>
-
-</footer> -->
-
 <footer class="footer app {{ site.themeClass }}">
   <div class="container">
     <div class="footgrid">
@@ -48,8 +12,12 @@
         <p class="footblurb">From code to the cloud — thoughts and experiences on software engineering, data, and innovation.</p>
       </div>
       <div>
-        <div class="footh">Navigation</div><a class="footlink" onClick="{{ goHome }}">Home</a><a class="footlink"
-          onClick="{{ goArticles }}">Articles</a><a class="footlink" onClick="{{ goAbout }}">About</a><a class="footlink" onClick="{{ goContact }}">Contact</a>
+        <div class="footh">Navigation</div>
+        {% for item in site.navigation %}
+          <a class="footlink" href="{{ item.url | relative_url }}">
+            {{ item.title }}
+          </a>
+          {% endfor %}
       </div>
       <div>
         <div class="footh">Social Networks</div><a class="footlink"
