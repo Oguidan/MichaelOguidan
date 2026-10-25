@@ -26,7 +26,7 @@ layout: default
             {% assign featured = site.posts | where: "featured", true | first %}
 
             {% if featured %}
-            <a href="{{ featured.url | relative_url}}"></a>
+            <a href="{{ featured.url | relative_url}}">
                 <div class="featured">
                         <div class="featcover {{ featured.cover }}">
                             <div class="grido"></div>
@@ -50,8 +50,14 @@ layout: default
 
             <div class="grid3">
                 {% for post in site.posts %}
+                {% capture search_text %}
+                    {{ post.title }}
+                    {{ post.topic }}
+                    {{ post.categories | join: ' ' }}
+                    {{ post.tags | join: ' ' }}
+                {% endcapture %}
                 <a href="{{ post.url | relative_url}}">
-                    <div class="acard" data-category="{{ post.categories | first | slugify }}">
+                    <div class="acard" data-categories="{% for category in post.categories %} {{ category | slugify }} {% unless forloop.last %} {% endunless %} {% endfor %}" data-search="{{ search_text | strip_html | downcase | escape}}">
                         <div class="cover {{ post.cover }} {{ post.categories | first | downcase }}">
                             <div class="grido"></div>
                             <div class="covwm">{{ post.categories | first | truncate: 18 }}</div>
@@ -82,30 +88,45 @@ layout: default
     document.addEventListener('DOMContentLoaded', () => {
         // Get buttons and articles cards
         const filterButtons = document.querySelectorAll('.fchip');
-        const articleCards = document.querySelectorAll('.acard');
+        const searchInput = document.querySelector('#article-search');
+        const articleLinks = document.querySelectorAll('.grid3 > a');
+        let selectedCategory = 'all';
 
-        const applyFilter = (filter) => {
-            articleCards.forEach((card) => {
-                const category = (card.dataset.category || '').trim();
-                const show = filter === 'all' || category === filter;
-                card.hidden = !show;
-                card.style.display = show ? '' : 'none';
+        const applyFilter = () => {
+            const terms = (searchInput.value || '')
+                .trim()
+                .toLowerCase()
+                .split(/\s+/)
+                .filter(Boolean);
+
+            articleLinks.forEach((link) => {
+                const card = link.querySelector('.acard');
+                const categories = (card.dataset.categories || '').split('|');
+                const searchText = card.dataset.search || '';
+
+                const matchesCategory = selectedCategory === 'all' || categories.includes(selectedCategory);
+                const matchesSearch = terms.every((term) => searchText.includes(term));
+
+                link.hidden = !(matchesCategory && matchesSearch);
             });
         };
 
         filterButtons.forEach((button) => {
             button.addEventListener('click', () => {
-                const filter = button.dataset.filter;
+                selectedCategory = button.dataset.filter || 'all';
 
                 filterButtons.forEach((item) => {
                     const isActive = item === button;
                     item.classList.toggle('on', isActive);
-                    item.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+                    item.setAttribute('aria-pressed', String(isActive));
                 });
 
                 applyFilter(filter);
             });
         });
+
+        searchInput.addEventListener('input', applyFilter);
+        applyFilter();
     });
 </script>
 
