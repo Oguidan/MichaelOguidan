@@ -47,26 +47,26 @@ layout: default
             <div class="grid3">
                 {% for post in site.posts %}
                 <a href="{{ post.url | relative_url}}">
-                <div class="acard" data-category="{{ post.categories | first | slugify }}">
-                    <div class="cover {{ post.cover }} {{ post.categories | first | downcase }}">
-                        <div class="grido"></div>
-                        <div class="covwm">{{ post.categories | first | truncate: 18 }}</div>
-                        <div class="covtag">{{ post.topic }}</div>
-                    </div>
-
-                    <div class="acbody">
-                        <div class="actitle">
-                            <a href="{{ post.url | relative_url}}">{{ post.title }}</a>
+                    <div class="acard" data-category="{{ post.categories | first | slugify }}">
+                        <div class="cover {{ post.cover }} {{ post.categories | first | downcase }}">
+                            <div class="grido"></div>
+                            <div class="covwm">{{ post.categories | first | truncate: 18 }}</div>
+                            <div class="covtag">{{ post.topic }}</div>
                         </div>
-                        <div class="acexc">{{ post.excerpt | strip_html }}</div>
 
-                        <div class="acmeta">
-                            <span>{{ post.date | date: "%d %b %Y" }}</span>
-                            <span class="dotsep"></span>
-                            <span>{{ post.read | reading_time }} min</span>
+                        <div class="acbody">
+                            <div class="actitle">
+                                <p>{{ post.title }}</p>
+                            </div>
+                            <div class="acexc">{{ post.excerpt | strip_html }}</div>
+
+                            <div class="acmeta">
+                                <span>{{ post.date | date: "%d %b %Y" }}</span>
+                                <span class="dotsep"></span>
+                                <span>{{ post.read | reading_time }} min</span>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </a>
                 {% endfor %}
             </div>
