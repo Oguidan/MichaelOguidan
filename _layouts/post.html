@@ -20,21 +20,10 @@ layout: default
     <div class="grido"></div>
     <div class="covwm">{{ page.categories }}</div>
   </div>
-  <sc-for list="{{ page.body }}" as="b" hint-placeholder-count="6">
-    <sc-if value="{{ b.isP }}" hint-placeholder-val="{{ true }}">
-      <p class="abody">{{ b.text }}</p>
-    </sc-if>
-    <sc-if value="{{ b.isH2 }}" hint-placeholder-val="{{ false }}">
-      <h2 class="abody-h2">{{ b.text }}</h2>
-    </sc-if>
-    <sc-if value="{{ b.isCode }}" hint-placeholder-val="{{ false }}">
-      <pre class="code"><code>{{ b.text }}</code></pre>
-    </sc-if>
-    <sc-if value="{{ b.isQuote }}" hint-placeholder-val="{{ false }}">
-      <blockquote class="aq">{{ b.text }}</blockquote>
-    </sc-if>
-  </sc-for>
-  <div class="arttags"><sc-for list="{{ current.tags }}" as="t" hint-placeholder-count="3"><span class="tag">#
+  <div class="article-content">
+    {{ page.content }}
+  </div>
+  <div class="arttags"><sc-for list="{{ page.tags }}" as="t" hint-placeholder-count="3"><span class="tag">#
         {{ t }}</span></sc-for></div>
   <div class="authorcard">
     <div class="bigav">MO</div>
