@@ -1,15 +1,16 @@
-<div class="acard" onClick="{{ a.open }}">
+<div class="acard">
     <a href="{{ post.url | relative_url}}">
-    <div class="cover {{ post.cover }}">
-        <div class="grido"></div>
-        <div class="covwm">{{ post.categories }}</div>
-        <div class="covtag">{{ post.topic }}</div>
-    </div>
-    <div class="acbody">
-        <div class="actitle">{{ post.title }}</div>
-        <div class="acexc">{{ post.description }}</div>
-        <div class="acmeta"><span>{{ post.date | date: "%b %d, %Y" }}</span><span class="dotsep"></span><span>{{ post.read }}</span>
+        <div class="cover {{ post.cover }}">
+            <div class="grido"></div>
+            <div class="covwm">{{ post.categories }}</div>
+            <div class="covtag">{{ post.topic }}</div>
         </div>
-    </div>
+        <div class="acbody">
+            <div class="actitle">{{ post.title }}</div>
+            <div class="acexc">{{ post.description }}</div>
+            <div class="acmeta"><span>{{ post.date | date: "%b %d, %Y" }}</span><span class="dotsep"></span><span>{{
+                    post.read }}</span>
+            </div>
+        </div>
     </a>
 </div>
