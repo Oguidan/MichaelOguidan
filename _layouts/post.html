@@ -16,11 +16,11 @@ layout: default
       <div class="arole">Software Engineer · Python, Go, Cloud &amp; Data</div>
     </div>
   </div>
-  <div class="artcover {{ current.cov }}">
+  <div class="artcover {{ page.cover }}">
     <div class="grido"></div>
-    <div class="covwm">{{ current.wm }}</div>
+    <div class="covwm">{{ page.categories }}</div>
   </div>
-  <sc-for list="{{ current.body }}" as="b" hint-placeholder-count="6">
+  <sc-for list="{{ page.body }}" as="b" hint-placeholder-count="6">
     <sc-if value="{{ b.isP }}" hint-placeholder-val="{{ true }}">
       <p class="abody">{{ b.text }}</p>
     </sc-if>
